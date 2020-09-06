@@ -1,0 +1,23 @@
+.nav {
+    text-align: right;
+}
+
+header {
+    background-color: #999;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+button {
+    margin: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
