@@ -1,8 +1,9 @@
 import React from 'react'
+import {Link, Route} from 'react-router-dom'
 import './Register.css'
 
 class Register extends React.Component {
-    
+
     handleSubmit(event) {
         event.preventDefault()
     }
@@ -21,7 +22,7 @@ class Register extends React.Component {
             <input type="text" name="password" />
             </label>
             <br />
-            <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" />
       </form>
       </div>
         )
