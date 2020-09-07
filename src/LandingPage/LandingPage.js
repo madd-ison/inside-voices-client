@@ -6,7 +6,7 @@ function LandingPage() {
     return (
         <div className='about-us'>
             <section>
-                <h1>Talk To Yourself</h1>
+                <h1>Check In On <em>You</em></h1>
                 <p>[screenshot of journal page]</p>
                 <p>Record moments of inspiration, 
                     reflect on daily thoughts and accomplishments, 

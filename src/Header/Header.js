@@ -1,10 +1,9 @@
 import React from 'react'
-import './Nav.css'
+import './Header.css'
 
-function Nav() {
+function Header() {
     return (
         <div className="nav">
-            <button>Login</button>
             <header>
                 <h1>INSIDE VOICES</h1>
             </header>
@@ -12,4 +11,4 @@ function Nav() {
     )
 }
 
-export default Nav
+export default Header
