@@ -11,10 +11,21 @@ function App() {
   return (
     <main className='App'>
       <div className='login'>
-        <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
+        <Link to='/home'>
+          <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
+          </Link>
       </div>
       <Header />
-      <LandingPage />
+
+      <Switch>
+        <Route exact path='/'>
+          <LandingPage />
+        </Route>
+        <Route path='/home'>
+          {isLoggedIn ? <Home /> : <Redirect to='/' />}
+        </Route>
+
+      </Switch>
       <Footer />
     </main>
   )
