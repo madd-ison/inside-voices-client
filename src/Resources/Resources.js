@@ -1,8 +1,22 @@
 import React from 'react'
+import store from '../resources-store.js'
+import './Resources.css'
+import ResourceComponent from './ResourceComponent.js'
 
 function Resources() {
+    const list = store.aid.map(aid => {
+        return (
+            <div id='resource-component'>
+                <ResourceComponent
+                    name={aid.aid_name}
+                    contact={aid.contact}
+                    description={aid.aid_description} />
+            </div>)
+        })
     return (
-        <h1>Resources page!</h1>
+        <div id='resources-list'>
+            {list}
+        </div>
     )
 }
 

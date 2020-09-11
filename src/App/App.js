@@ -14,34 +14,43 @@ function App() {
   return (
     <main className='App'>
       <div className='login'>
-        <Link to='/home'>
-          <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
-          </Link>
+        <form>
+          <input 
+            name='email'
+            placeholder='email' />
+          <input 
+            name='password'
+            placeholder='password' />
+        </form>
+          <Link to='/home'>
+            <button type='submit' onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
+            </Link>
       </div>
       <Header />
+      <body>
+        <Switch>
+          <Route exact path='/'>
+            <LandingPage />
+          </Route>
 
-      <Switch>
-        <Route exact path='/'>
-          <LandingPage />
-        </Route>
+          <Route path='/home'>
+            {isLoggedIn ? <Home /> : <Redirect to='/' />}
+          </Route>
 
-        <Route path='/home'>
-          {isLoggedIn ? <Home /> : <Redirect to='/' />}
-        </Route>
+          <Route path='/journal'>
+            <Journal />
+          </Route>
 
-        <Route path='/journal'>
-          <Journal />
-        </Route>
+          <Route path='/meditations'>
+            <Meditations />
+          </Route>
+          
+          <Route path='/resources'>
+            <Resources />
+          </Route>
 
-        <Route path='/meditations'>
-          <Meditations />
-        </Route>
-        
-        <Route path='/resources'>
-          <Resources />
-        </Route>
-
-      </Switch>
+        </Switch>
+      </body>
       <Footer />
     </main>
   )

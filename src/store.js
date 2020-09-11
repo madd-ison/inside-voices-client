@@ -29,5 +29,28 @@ export default {
             'date': '2020-09-08T00:00:00.000Z',
             'content': 'dear diary...'
         }
-    ]
+    ],
+    'meditations': [
+        {
+            'med_id': 1,
+            'type': 'guided',
+            'title': '21 Days of Abundance',
+            'author': 'Deepak Chopra',
+            'file': 'audiofile'
+        },
+        {
+            'med_id': 2,
+            'type': 'guided',
+            'title': 'Spirit Body',
+            'author': 'Gillian Walsh',
+            'file': 'audiofile'
+        },
+        {
+            'med_id': 3,
+            'type': 'instrumental',
+            'title': '417hz',
+            'author': null,
+            'file': 'audiofile'
+        }
+    ],
 }

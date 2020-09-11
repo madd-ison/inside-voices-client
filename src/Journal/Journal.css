@@ -1,0 +1,9 @@
+.journal-intro, .posted {
+    text-align: center;
+    padding: 30px;
+}
+
+#journal_prompt {
+    font-size: 18px;
+    margin-bottom: 30px;
+}

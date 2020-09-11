@@ -1,0 +1,14 @@
+#resources-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resource-component {
+    width: 70%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+}
