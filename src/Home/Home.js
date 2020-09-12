@@ -5,15 +5,15 @@ function Home() {
     return (
         <div className='home'>
             <section>
-                <Link to='/journal' style={{color: '#fff', textDecoration: 'none' }}><h1>Journal</h1></Link>
+                <Link to='/journal' style={{color: '#fff'}}><h1>Journal</h1></Link>
             </section>
             
             <section>
-                <Link to='/meditations' style={{color: '#000', textDecoration: 'none' }}><h1>Meditations</h1></Link>
+                <Link to='/meditations' style={{color: '#000'}}><h1>Meditations</h1></Link>
             </section>
 
             <section>
-                <Link to='/resources' style={{color: '#fff', textDecoration: 'none' }}><h1>Resources</h1></Link>
+                <Link to='/resources' style={{color: '#fff'}}><h1>Resources</h1></Link>
             </section>
         </div>
     )

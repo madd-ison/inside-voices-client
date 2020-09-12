@@ -1,31 +1,36 @@
 import React from 'react'
 import './Register.css'
 
-class Register extends React.Component {
-
-    handleSubmit(event) {
-        event.preventDefault()
-    }
-    
-    render() {
+function Register() {
     return (
         <div className='signup-form'>
-        <form onSubmit={this.handleSubmit}>
+        <form>
             <label>
                 Email
-            <input type="text" name="email" />
+                <input 
+                    type="text" 
+                    name="username"
+                    required />
+            </label>
+            <label>
+                Password
+                <input 
+                    type="password" 
+                    name="password"
+                    required />
             </label>
             <br />
             <label>
-                Password
-            <input type="text" name="password" />
+                Confirm Password
+                <input type="password"  
+                        name="confirmPassword"
+                        required />
             </label>
-            <br />
-                <input type="submit" value="Submit" />
+                <br />
+            <button type="submit">Sign Up</button>
       </form>
       </div>
         )
     }
-}
 
 export default Register

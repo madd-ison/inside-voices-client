@@ -21,3 +21,10 @@ section {
   section h1 {
       font-size: 36px;
   }
+
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: #000;
+  }

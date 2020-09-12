@@ -6,12 +6,12 @@ import ResourceComponent from './ResourceComponent.js'
 function Resources() {
     const list = store.aid.map(aid => {
         return (
-            <div id='resource-component'>
+            <section id='resource-component'>
                 <ResourceComponent
                     name={aid.aid_name}
                     contact={aid.contact}
                     description={aid.aid_description} />
-            </div>)
+            </section>)
         })
     return (
         <div id='resources-list'>

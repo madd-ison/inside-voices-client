@@ -18,7 +18,7 @@ export default {
         },
         {
             'aid_id': 3,
-            'aid_type': 'phone',
+            'aid_type': 'etc',
             'aid_image': 'logo',
             'aid_name': 'Hotline',
             'aid_description': 'Call this number for legal advice.',

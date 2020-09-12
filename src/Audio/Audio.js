@@ -1,11 +1,15 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
+import './Audio.css'
 
 function Audio(props) {
     return (
         <div className='meditation'>
             <section id='audio'>
-            <h1>{props.title} {props.author === null ? null : `: ${props.author}`}</h1>
-            <h3>{props.type} meditation</h3>
+                <h3>{props.title} {props.author === null ? null : `: ${props.author}`}</h3>
+                <hr />
+                <h3>{props.type} meditation</h3>
+                <ReactPlayer className='react-player' url={props.audio}/>
             </section>
         </div>
     )

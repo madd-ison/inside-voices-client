@@ -1,13 +1,19 @@
 export default {
     'users': [
         {
-            'user_id': 1
+            'user_id': 1,
+            'username': '',
+            'password': ''
         },
         {
-            'user_id': 2
+            'user_id': 2,
+            'username': '',
+            'password': ''
         },
         {
-            'user_id': 3
+            'user_id': 3,
+            'username': '',
+            'password': ''
         }
     ],
     'journals': [
@@ -34,23 +40,17 @@ export default {
         {
             'med_id': 1,
             'type': 'guided',
-            'title': '21 Days of Abundance',
+            'title': '21 Days of Abundance - Day 1',
             'author': 'Deepak Chopra',
-            'file': 'audiofile'
+            'file': 'https://soundcloud.com/inspiosphere-soundsphere/day-1-21-days-of-abundance-meditation'
         },
         {
             'med_id': 2,
-            'type': 'guided',
-            'title': 'Spirit Body',
-            'author': 'Gillian Walsh',
-            'file': 'audiofile'
-        },
-        {
-            'med_id': 3,
             'type': 'instrumental',
             'title': '417hz',
             'author': null,
-            'file': 'audiofile'
+            'file': 'https://soundcloud.com/mindbodyharmonics/417hz'
         }
     ],
+
 }

@@ -5,7 +5,7 @@ import Posts from '../Posts/Posts'
 
 function Journal() {
     const journalEntry = store.journals.map(entry => 
-        <Posts key={entry.journal_id}  date={entry.date} content={entry.content}/>)
+                <Posts key={entry.journal_id}  date={entry.date} content={entry.content}/>)
     return (
         <div className='journal'>
 
@@ -31,7 +31,7 @@ function Journal() {
                     name='newEntry'
                  />
                 <br />
-                <input type='submit'/>
+                <button type='submit'>Post</button>
             </form>
             </section>
 

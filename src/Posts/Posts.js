@@ -6,6 +6,7 @@ function Posts(props) {
             <section id='past-entries'>
                 <h1>{props.date}</h1>
                 <p>{props.content}</p>
+                <button>Delete Post</button>
             </section>
         </div>
     )
