@@ -20,19 +20,19 @@ export default {
         {   
             'journal_id': 1,
             'user_id': 1,
-            'date': '020-09-10T00:00:00.000Z',
+            'date': '020-09-10',
             'content': 'This is my first journal entry!'
         },
         {   
             'journal_id': 1,
             'user_id': 2,
-            'date': '2020-09-09T00:00:00.000Z',
+            'date': '2020-09-09',
             'content': 'This is MY first journal entry.'
         },
         {   
             'journal_id': 1,
             'user_id': 3,
-            'date': '2020-09-08T00:00:00.000Z',
+            'date': '2020-09-08',
             'content': 'dear diary...'
         }
     ],

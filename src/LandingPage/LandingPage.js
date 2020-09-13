@@ -2,7 +2,7 @@ import React from 'react'
 import './LandingPage.css'
 import Register from '../Register/Register'
 
-function LandingPage() {
+function LandingPage(props) {
     return (
         <div className='about-us'>
             <section>
@@ -32,7 +32,7 @@ function LandingPage() {
             <section>
                 <h1>Let's take care of each other.</h1>
                 <p>Sign up for a free account here:</p>
-                <Register />
+                <Register onSubmit={props.onSubmit} />
             </section>
 
         </div>
