@@ -12,6 +12,7 @@ import store from '../store'
 import {v4 as uuid} from 'uuid'
 import Context from '../Context'
 import ContactUs from '../ContactUs/ContactUs'
+import Login from '../Login/Login'
 
 const signUpUser = async (user) => {
   const id = uuid()
@@ -32,14 +33,7 @@ function App() {
     <main className='App'>
     <AppContext.Provider value={{...Context, signUpUser, loginUser}}>
       <div className='login'>
-        <form>
-          <input 
-            name='username'
-            placeholder='Email' />
-          <input 
-            name='password'
-            placeholder='Password' />
-        </form>
+        <Login />
           <Link to='/home'>
             <button type='submit' onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
             </Link>

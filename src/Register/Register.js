@@ -11,9 +11,8 @@ function handleChange(event) {
     setInputData(prevInputData => ({...prevInputData, [name]: value}))
 }
 
-function handleSubmit(event) {
-    event.preventDefault()
-    signUpUser()
+function handleSubmit() {
+    signUpUser(inputData)
 }
 
 const signUpUser = async (user) => {
@@ -23,7 +22,7 @@ const signUpUser = async (user) => {
   }
     return (
         <div className='signup-form'>
-        <form onSubmit={handleSubmit}>
+        <form>
             <label>
                 Email
                 <input 
@@ -49,7 +48,7 @@ const signUpUser = async (user) => {
                         required />
             </label>
                 <br />
-            <button type="submit">Sign Up</button>
+            <button type="submit" onClick={handleSubmit}>Sign Up</button>
       </form>
       </div>
         )

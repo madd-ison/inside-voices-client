@@ -4,7 +4,7 @@ import './Journal.css'
 import Posts from '../Posts/Posts'
 
 function Journal() {
-    const journalEntry = store.journals.map(entry => 
+    const journalEntries = store.journals.map(entry => 
                 <Posts key={entry.journal_id}  date={entry.date} content={entry.content}/>)
     return (
         <div className='journal'>
@@ -37,7 +37,7 @@ function Journal() {
 
             <div className='posted'>
                 <h3>Past Entries</h3>
-                {journalEntry}
+                {journalEntries}
             </div>
         </div>
     )

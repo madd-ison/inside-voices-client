@@ -1,5 +1,5 @@
 import React from 'react'
-import store from '../resources-store.js'
+import store from '../store.js'
 import './Resources.css'
 import ResourceComponent from './ResourceComponent.js'
 
