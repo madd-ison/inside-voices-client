@@ -8,6 +8,7 @@ function Resources() {
         return (
             <section id='resource-component'>
                 <ResourceComponent
+                    key={aid.aid_id}
                     name={aid.aid_name}
                     contact={aid.contact}
                     description={aid.aid_description} />

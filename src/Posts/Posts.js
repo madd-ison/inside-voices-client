@@ -1,6 +1,12 @@
 import React from 'react'
 
 function Posts(props) {
+    {/* 
+    getJournals: () => {},
+    getJournal: () => {},
+    deleteJournal: () => {},
+    updateJournal: () => {},
+    postJournal: () => {}*/ }
     return (
         <div className='entry'>
             <section id='past-entries'>
