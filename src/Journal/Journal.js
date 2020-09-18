@@ -1,11 +1,14 @@
 import React from 'react'
 import store from '../store'
 import './Journal.css'
-import Posts from '../Posts/Posts'
+import JournalHistory from '../JournalHistory/JournalHistory'
+import NewJournal from '../Forms/NewJournal'
+
+// getJournals 
 
 function Journal() {
     const journalEntries = store.journals.map(entry =>
-                <Posts key={entry.journal_id}  date={entry.date} content={entry.content}/>)
+                <JournalHistory key={entry.journal_id}  date={entry.date} content={entry.content}/>)
     return (
         <div className='journal'>
 
@@ -16,28 +19,13 @@ function Journal() {
             The past and the future are out of focus.</p>
         </div>
 
-        <section id='new-entry'>
-            <form id='new-entry'>
-            <select id='journal_prompt'>
-                <option>How are you today?</option>
-                <option>Tell yourself what you need to hear.</option>
-                <option>What's a plan of action for right *now*?</option>
-              </select>
-              <br />
-                <textarea
-                    rows={10}
-                    cols={60}
-                    wrap='hard'
-                    name='newEntry'
-                 />
-                <br />
-                <button type='submit'>Post</button>
-            </form>
-            </section>
+        <NewJournal />
 
             <div className='posted'>
                 <h3>Past Entries</h3>
+                <div>
                 {journalEntries}
+                </div>
             </div>
         </div>
     )

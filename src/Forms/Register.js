@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import store from '../store'
 import {v4 as uuid} from 'uuid'
-import './Register.css'
+
+//signUpUser
 
 function Register() {
 const [inputData, setInputData] = useState({username: '', password: ''})

@@ -1,6 +1,6 @@
 import React from 'react'
 import './LandingPage.css'
-import Register from '../Register/Register'
+import Register from '../Forms/Register'
 
 function LandingPage(props) {
     return (

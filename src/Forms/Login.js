@@ -1,16 +1,10 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
+import {Context} from '../Context'
 
 function Login() {
-  {/*  const [currentUser, setCurrentUser] = useState({currentUser: ''})
+//const [email, setEmail] = useState('')
+// const [password, setPassword] = useState('')
 
-    function handleLogin(event) {
-        const {name, value} = event.target
-        setCurrentUser(prevUser => ({...prevUser, [name]: value}))
-    }
-
-    function loginSubmit() {
-
-    } */}
     return (
         <form>
             <label>
@@ -18,7 +12,7 @@ function Login() {
                 <input 
                     type="text" 
                     name="username"
-                    //onChange={handleLogin}
+                    // onChange={() => setEmail()}
                     required 
                     />
             </label>
@@ -27,7 +21,7 @@ function Login() {
                 <input 
                     type="password" 
                     name="password"
-                    //onChange={handleLogin}
+                    // onChange={() => setPassword}
                     required/>
             </label>
       </form>

@@ -1,12 +1,8 @@
 import React from 'react'
 
-function Posts(props) {
-    {/* 
-    getJournals: () => {},
-    getJournal: () => {},
-    deleteJournal: () => {},
-    updateJournal: () => {},
-    postJournal: () => {}*/ }
+//deleteJournal, updateJournal
+
+function JournalHistory(props) {
     return (
         <div className='entry'>
             <section id='past-entries'>
@@ -18,4 +14,4 @@ function Posts(props) {
     )
 }
 
-export default Posts
+export default JournalHistory

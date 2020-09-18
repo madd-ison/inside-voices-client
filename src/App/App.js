@@ -8,30 +8,14 @@ import Home from '../Home/Home'
 import Journal from '../Journal/Journal'
 import Meditations from '../Meditations/Meditations'
 import Resources from '../Resources/Resources'
-import store from '../store'
-import {v4 as uuid} from 'uuid'
-import Context from '../Context'
 import ContactUs from '../ContactUs/ContactUs'
-import Login from '../Login/Login'
-
-const signUpUser = async (user) => {
-  const id = uuid()
-  store.users.push({...user, id})
-  return user
-}
-
-const loginUser = async (username, password) => {
-  return store.users.find(user => user.username === username.trim().toLowerCase() && user.password === password.trim())
-}
-
-const AppContext = React.createContext(Context)
+import Login from '../Forms/Login'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
     <main className='App'>
-    <AppContext.Provider value={{...Context, signUpUser, loginUser}}>
       <div className='login'>
         <Login />
           <Link to='/home'>
@@ -66,7 +50,6 @@ function App() {
 
         </Switch>
       <Footer />
-      </AppContext.Provider>
     </main>
   )
 }
