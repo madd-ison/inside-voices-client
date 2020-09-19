@@ -10,12 +10,13 @@ import Meditations from '../Meditations/Meditations'
 import Resources from '../Resources/Resources'
 import ContactUs from '../ContactUs/ContactUs'
 import Login from '../Forms/Login'
+import {AppContextProvider} from '../Context'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-
   return (
     <main className='App'>
+      <AppContextProvider>
       <div className='login'>
         <Login />
           <Link to='/home'>
@@ -50,6 +51,7 @@ function App() {
 
         </Switch>
       <Footer />
+      </AppContextProvider>
     </main>
   )
 }

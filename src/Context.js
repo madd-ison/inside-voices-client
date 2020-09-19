@@ -1,55 +1,38 @@
-import React, {useState} from 'react'
-import {v4 as uuid} from 'uuid'
-import store from './store'
+import React, {Component} from 'react'
 
-const Context = React.createContext()
+const AppContext = React.createContext()
 
-function ContextProvider({children}) {
-    const [isLoggedIn, setIsLoggedIn] = useState([])
-    const [currentUser, setCurrentUser] = useState([])
-    const [journals, setJournals] = useState([])
-
-    const signUpUser = async (user) => {
-        const id = uuid()
-        store.users.push({...user, id})
-        return user
-      }
-
-    const loginUser = async (username, password) => {
-        return store.users.find(user => user.username === username.trim().toLowerCase() && user.password === password.trim())
-      }
-
-    function getJournals() {
-
+class AppContextProvider extends Component {
+    state = {
+        isLoggedIn: [],
+        journals: [],
+        currentUser: []
     }
 
-    function postJournal() {
-
-    }
+    signUp = () => {}
+    logIn = () => {}
+    getJournals = () => {}
+    postJournal = () => {}
+    editJournal = () => {}
+    deleteJournal = () => {}
     
-    function deleteJournal(journal_id) {
-        setJournals(prevJournals => prevJournals.filter(journal => journals.journal_id !== journal_id))
+    render() {
+        return (
+            <AppContext.Provider value={{
+                loggedIn: this.state.isLoggedIn,
+                journals: this.state.journals,
+                currentUser: this.state.currentUser,
+                signUp: this.signUp,
+                logIn: this.logIn,
+                getJournals: this.getJournals,
+                postJournal: this.postJournal,
+                editJournal: this.editJournal,
+                deleteJournal: this.deleteJournal
+            }}>
+                {this.props.children}
+            </AppContext.Provider>
+        )
     }
-
-    function updateJournal() {
-
-    }
-
-    return (
-        <Context.Provider value={{
-            isLoggedIn,
-            currentUser,
-            journals,
-            signUpUser,
-            loginUser,
-            getJournals,
-            postJournal,
-            deleteJournal,
-            updateJournal
-        }}>
-            {children}
-        </Context.Provider>
-    )
 }
 
-export {ContextProvider, Context}
+export {AppContextProvider, AppContext}
