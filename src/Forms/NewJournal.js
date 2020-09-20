@@ -1,12 +1,12 @@
-import React, {useContext} from 'react'
-import {AppContext} from '../Context'
+import React from 'react'
+// import {AppContext} from '../Context'
 import {v4 as uuid} from 'uuid'
 import store from '../store'
 
-//postJournal
+//fetch postJournal
 
 function NewJournal() {
-    const {journals, postJournal} = useContext(AppContext)
+    // const {journals, postJournal} = useContext(AppContext)
 
     const handleEntry = e => {
         e.preventDefault()
@@ -17,6 +17,7 @@ function NewJournal() {
             content: e.target['newEntry'].value
         }
         store.journals.push(newPost)
+        console.log(newPost)
     }
 
     return (

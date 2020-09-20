@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import store from '../store'
 import './Journal.css'
-import JournalHistory from '../JournalHistory/JournalHistory'
+import JournalHistory from '../JournalHistory/JournalHistory.js'
 import NewJournal from '../Forms/NewJournal'
 
 // getJournals 
 
 function Journal() {
-    const journalEntries = store.journals.map(entry =>
-                <JournalHistory key={entry.journal_id}  date={entry.date} content={entry.content}/>)
+const journalEntries = store.journals.map(entry =>
+        <JournalHistory key={entry.journal_id}  id={entry.journal_id} date={entry.date} content={entry.content}/>)
+
     return (
         <div className='journal'>
 
@@ -24,7 +25,7 @@ function Journal() {
             <div className='posted'>
                 <h3>Past Entries</h3>
                 <div>
-                {journalEntries}
+                    {journalEntries}
                 </div>
             </div>
         </div>
