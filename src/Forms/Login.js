@@ -1,5 +1,4 @@
-import React, {useState, useContext} from 'react'
-import {Context} from '../Context'
+import React from 'react'
 
 function Login() {
 //const [email, setEmail] = useState('')

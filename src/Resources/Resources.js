@@ -1,22 +1,29 @@
 import React from 'react'
-import store from '../store.js'
 import './Resources.css'
-import ResourceComponent from './ResourceComponent.js'
+import Accordion from '../utils/Accordion'
+
 
 function Resources() {
-    const list = store.aid.map(aid => {
-        return (
-            <section id='resource-component'>
-                <ResourceComponent
-                    key={aid.aid_id}
-                    name={aid.aid_name}
-                    contact={aid.contact}
-                    description={aid.aid_description} />
-            </section>)
-        })
     return (
-        <div id='resources-list'>
-            {list}
+        <div>
+            <h2>Find what you need in NYC.</h2>
+            <Accordion
+                title="What is your return policy?"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+                title="Which languages does you support?"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+            <Accordion
+                title="Can I use a custom domain?"
+                content="
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+     />
         </div>
     )
 }

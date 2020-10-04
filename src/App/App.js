@@ -11,9 +11,8 @@ import Resources from '../Resources/Resources'
 import ContactUs from '../ContactUs/ContactUs'
 import Login from '../Forms/Login'
 import {AppContextProvider} from '../Context'
-import JournalPost from '../JournalPost/JournalPost'
 
-function App() {
+function App () {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <main className='App'>
@@ -38,10 +37,6 @@ function App() {
             <Journal />
           </Route>
 
-          <Route path='/journal/:journalId'>
-            <JournalPost />
-          </Route>
-
           <Route path='/meditations'>
             <Meditations />
           </Route>
@@ -57,8 +52,6 @@ function App() {
         </Switch>
       <Footer />
       </AppContextProvider>
-    </main>
-  )
+    </main>)
 }
-
 export default App
