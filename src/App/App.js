@@ -38,7 +38,7 @@ function App () {
             <Journal />
           </Route>
 
-          <Route path='journal/:id'>
+          <Route path='/journal/:id'>
             <EditPost />
           </Route>
 

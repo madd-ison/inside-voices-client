@@ -1,6 +1,5 @@
 import React, {Fragment, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import EditPost from './EditPost'
 import config from '../config'
 
 const JournalHistory = () => {

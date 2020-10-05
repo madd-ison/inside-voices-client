@@ -1,6 +1,5 @@
 import React from 'react'
 import './Meditations.css'
-import ReactPlayer from 'react-player'
 import store from '../store'
 import Audio from '../Audio/Audio'
 
