@@ -1,5 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 import EditPost from './EditPost'
+import config from '../config'
 
 const JournalHistory = () => {
 
@@ -22,7 +24,7 @@ const JournalHistory = () => {
 
     const getJournals = async () => {
         try {
-            const response = await fetch('http://localhost:8000/api/journal')
+            const response = await fetch(`${config.API_ENDPOINT}`)
             const jsonData = await response.json()
 
             setJournals(jsonData)
@@ -35,14 +37,13 @@ const JournalHistory = () => {
     useEffect(() => {
         getJournals()
     }, [])
-    console.log(journals)
     return (
         <Fragment>
            {journals.map(journal => (
                <section key={journal.id}>
                    <h3>{journal.title}</h3>
                    <p>{journal.content}</p>
-                   <button>Edit</button>
+                   <Link to={`/journal/${journal.id}`}><button>Edit</button></Link>
                    <button onClick={() => deletePost(journal.id)}>Delete</button>
                </section>
            ))}

@@ -9,7 +9,7 @@ function Audio(props) {
                 <h3>{props.title} {props.author === null ? null : `: ${props.author}`}</h3>
                 <hr />
                 <h3>{props.type} meditation</h3>
-                <ReactPlayer className='react-player' url={props.audio}/>
+                <ReactPlayer className='react-player' controls url={props.audio}/>
             </section>
         </div>
     )

@@ -5,26 +5,44 @@ import Accordion from '../utils/Accordion'
 
 function Resources() {
     return (
-        <div>
-            <h2>Find what you need in NYC.</h2>
+        <section>
+            <h1>Find what you need in NYC.</h1>
             <Accordion
-                title="What is your return policy?"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                title='Food'
+                content="<a href='#'>Link</a>
+                    <br />
+                    <a href='#'>Another Link</a>"
             />
             <Accordion
-                title="Which languages does you support?"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                title='Wellness'
+                content="OpenPath"
+            />
+            <Accordion 
+                title='Youth'
+                content="!!!"
+            />
+            <Accordion 
+                title='Mutual Aid Efforts'
+                content='links'
+            />
+            <Accordion 
+                title='LGBTQIA+'
+                content="links"
             />
             <Accordion
-                title="Can I use a custom domain?"
+                title='Housing'
                 content="
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </br>
+                <br />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </br>
+                <br />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
-     />
-        </div>
+            />
+            <Accordion 
+                title='*Alternatives to calling the police*'
+                content='x'
+            />
+        </section>
     )
 }
 

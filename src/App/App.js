@@ -11,6 +11,7 @@ import Resources from '../Resources/Resources'
 import ContactUs from '../ContactUs/ContactUs'
 import Login from '../Forms/Login'
 import {AppContextProvider} from '../Context'
+import EditPost from '../Journal/EditPost'
 
 function App () {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -35,6 +36,10 @@ function App () {
 
           <Route path='/journal'>
             <Journal />
+          </Route>
+
+          <Route path='journal/:id'>
+            <EditPost />
           </Route>
 
           <Route path='/meditations'>

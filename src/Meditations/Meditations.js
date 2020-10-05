@@ -1,4 +1,6 @@
 import React from 'react'
+import './Meditations.css'
+import ReactPlayer from 'react-player'
 import store from '../store'
 import Audio from '../Audio/Audio'
 
@@ -11,7 +13,7 @@ function Meditations() {
             author={audio.author}
             audio={audio.file} /> )
     return (
-        <div>{audio}</div>
+        <h2>{audio}</h2>
     )
 }
 

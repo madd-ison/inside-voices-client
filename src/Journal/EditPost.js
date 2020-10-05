@@ -20,7 +20,8 @@ const EditPost = ({journal}) => {
     }
     return (
         <Fragment>
-            <button>Edit</button>
+            <textarea value={journal.content}/>
+            <button onClick={updateJournal}>Edit</button>
         </Fragment>
     )
 }
