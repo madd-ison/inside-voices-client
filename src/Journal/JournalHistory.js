@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import config from '../config'
 import moment from 'moment'
+import EditPost from './EditPost'
+
 
 const JournalHistory = () => {
 
@@ -45,7 +47,7 @@ const JournalHistory = () => {
                    <h3>{moment(journal.title).format("LL")}</h3>
                    <p>{journal.content}</p>
                    <Link to={`/journal/${journal.id}`}>
-                   <button>Edit</button>
+                        <EditPost journal={journal} content={journal.content} />
                     </Link>
                    <button onClick={() => deletePost(journal.id)}>Delete</button>
                </section>

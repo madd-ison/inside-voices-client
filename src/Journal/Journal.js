@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Journal.css'
 import JournalHistory from './JournalHistory'
 import NewPost from './NewPost'
