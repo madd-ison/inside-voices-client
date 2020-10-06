@@ -34,11 +34,11 @@ function App () {
             {isLoggedIn ? <Home /> : <Redirect to='/' />}
           </Route>
 
-          <Route path='/journal'>
+          <Route exact path='/journal'>
             <Journal />
           </Route>
 
-          <Route path='/journal/:id'>
+          <Route exact path='/journal/:id'>
             <EditPost />
           </Route>
 

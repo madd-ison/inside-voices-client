@@ -10,18 +10,14 @@ export default class Register extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    const { full_name, nickname, username, password } = ev.target
+    const { username, password } = ev.target
 
     this.setState({ error: null })
     AuthApiService.postUser({
       username: username.value,
-      password: password.value,
-      full_name: full_name.value,
-      nickname: nickname.value,
+      password: password.value
     })
       .then(user => {
-        full_name.value = ''
-        nickname.value = ''
         username.value = ''
         password.value = ''
         this.props.onRegistrationSuccess()
@@ -41,17 +37,6 @@ export default class Register extends Component {
       >
         <div role='alert'>
           {error && <p className='red'>{error}</p>}
-        </div>
-        <div className='full_name'>
-          <label htmlFor='RegistrationForm__full_name'>
-            Full name
-          </label>
-          <input
-            name='full_name'
-            type='text'
-            required
-            id='RegistrationForm__full_name'>
-          </input>
         </div>
         <div className='username'>
           <label htmlFor='RegistrationForm__user_name'>
@@ -73,17 +58,6 @@ export default class Register extends Component {
             type='password'
             required
             id='RegistrationForm__password'>
-          </input>
-        </div>
-        <div className='nickname'>
-          <label htmlFor='RegistrationForm__nickname'>
-            Nickname
-          </label>
-          <input
-            name='nickname'
-            type='text'
-            required
-            id='RegistrationForm__nick_name'>
           </input>
         </div>
         <button type='submit'>

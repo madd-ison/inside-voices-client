@@ -1,6 +1,7 @@
-import React, {Fragment, useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import config from '../config'
+import moment from 'moment'
 
 const JournalHistory = () => {
 
@@ -9,7 +10,7 @@ const JournalHistory = () => {
     //delete post
     const deletePost = async (id) => {
         try {
-            const deletePost = await fetch(`http://localhost:8000/api/journal/${id}`, {
+            await fetch(`http://localhost:8000/api/journal/${id}`, {
                 method: "DELETE"
             })
 
@@ -36,17 +37,20 @@ const JournalHistory = () => {
     useEffect(() => {
         getJournals()
     }, [])
+
     return (
-        <Fragment>
+        <div>
            {journals.map(journal => (
                <section key={journal.id}>
-                   <h3>{journal.title}</h3>
+                   <h3>{moment(journal.title).format("LL")}</h3>
                    <p>{journal.content}</p>
-                   <Link to={`/journal/${journal.id}`}><button>Edit</button></Link>
+                   <Link to={`/journal/${journal.id}`}>
+                   <button>Edit</button>
+                    </Link>
                    <button onClick={() => deletePost(journal.id)}>Delete</button>
                </section>
            ))}
-        </Fragment>
+        </div>
     )
 }
 export default JournalHistory

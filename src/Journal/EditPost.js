@@ -1,30 +1,28 @@
-import React, {Fragment, useState} from 'react'
+// import React, {useState} from 'react'
+// import config from '../config'
 
-const EditPost = ({journal}) => {
-    const [content, setContent] = useState(journal.content)
+// const EditPost = ({journal}) => {
 
-    const updateJournal = async e => {
-        e.preventDefault()
-        try {
-            const body = {content}
-            const response = await fetch(`http://localhost:8000/api/journal/${journal.id}`, 
-            {
-                method: "PUT",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(body)
-            })
-            console.log(response)
-        } catch (err) {
-            console.error(err.message)
-        }
-    }
-    return (
-        <Fragment>
-            <div>
-            <textarea value={journal.content}/>
-            <button onClick={updateJournal}>Edit</button>
-            </div>
-        </Fragment>
-    )
-}
-export default EditPost
+    // const [update, setUpdate] = useState('')
+
+    // const updateJournal = async e => {
+    //     e.preventDefault()
+    //     try {
+    //         const body = {update}
+    //         const response = await fetch(`${config.API_ENDPOINT}/${journal.id}`, 
+    //         {
+    //             method: "PATCH",
+    //             headers: {"Content-Type": "application/json"},
+    //             body: JSON.stringify(body)
+    //         })
+
+    //     } catch (err) {
+    //         console.error(err.message)
+    //     }
+    // }
+//     return (
+//         <div>
+//         </div>
+//     )
+// }
+// export default EditPost

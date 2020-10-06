@@ -18,7 +18,7 @@ const NewPost = () => {
         }
     }
     return (
-        <Fragment>
+        <div>
             <h3 className='journal-intro'>Imagine looking through 
                 a telescope into the present moment - this here, 
                 this now. The past and the future are out of focus.</h3>
@@ -44,7 +44,7 @@ const NewPost = () => {
                 >Post</button>
             </form>
             </section>
-        </Fragment>
+        </div>
     )
 }
 export default NewPost
