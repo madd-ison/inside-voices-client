@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import config from '../config'
+import TokenService from '../services/token-service'
 
 const NewPost = () => {
     const [content, setContent] = useState('')
@@ -7,9 +9,12 @@ const NewPost = () => {
         e.preventDefault()
         try {
             const newEntry = {content}
-            const response = await fetch('http://localhost:8000/api/journal', {
+            await fetch(`${config.API_ENDPOINT}`, {
                 method: "POST",
-                headers: {"Content-Type": "application/json"},
+                headers: {
+                    "Content-Type": "application/json",
+                    'authorization': `basic ${TokenService.getAuthToken()}`,
+                    },
                 body: JSON.stringify(newEntry)
             })
             window.location = '/journal'

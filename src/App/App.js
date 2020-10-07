@@ -10,16 +10,15 @@ import Meditations from '../Meditations/Meditations'
 import Resources from '../Resources/Resources'
 import ContactUs from '../ContactUs/ContactUs'
 import Login from '../Forms/Login'
-import {AppContextProvider} from '../Context'
-import EditPost from '../Journal/EditPost'
+import Logout from '../Forms/Logout'
+import TokenService from '../services/token-service'
 
 function App () {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <main className='App'>
-      <AppContextProvider>
       <div className='login'>
-        <Login />
+      {TokenService.hasAuthToken() ? <Logout /> : <Login />}
           <Link to='/home'>
             <button type='submit' onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
             </Link>
@@ -38,9 +37,9 @@ function App () {
             <Journal />
           </Route>
 
-          <Route exact path='/journal/:id'>
+          {/* <Route exact path='/journal/:id'>
             <EditPost />
-          </Route>
+          </Route> */}
 
           <Route path='/meditations'>
             <Meditations />
@@ -56,7 +55,6 @@ function App () {
 
         </Switch>
       <Footer />
-      </AppContextProvider>
     </main>)
 }
 export default App

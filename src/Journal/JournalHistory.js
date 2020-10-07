@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
 import config from '../config'
 import moment from 'moment'
-import EditPost from './EditPost'
-
+import TokenService from '../services/token-service'
 
 const JournalHistory = () => {
 
@@ -26,7 +24,11 @@ const JournalHistory = () => {
 
     const getJournals = async () => {
         try {
-            const response = await fetch(`${config.API_ENDPOINT}`)
+            const response = await fetch(`${config.API_ENDPOINT}`, {
+                headers: {
+                    'Authorization': `basic ${TokenService.getAuthToken()}`,
+                }
+            })
             const jsonData = await response.json()
 
             setJournals(jsonData)
@@ -46,9 +48,9 @@ const JournalHistory = () => {
                <section key={journal.id}>
                    <h3>{moment(journal.title).format("LL")}</h3>
                    <p>{journal.content}</p>
-                   <Link to={`/journal/${journal.id}`}>
+                   {/* <Link to={`/journal/${journal.id}`}>
                         <EditPost journal={journal} content={journal.content} />
-                    </Link>
+                    </Link> */}
                    <button onClick={() => deletePost(journal.id)}>Delete</button>
                </section>
            ))}

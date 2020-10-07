@@ -1,17 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
+import TokenService from '../services/token-service'
 
 function Login() {
-//const [email, setEmail] = useState('')
-// const [password, setPassword] = useState('')
+const [username, setUsername] = useState('')
+const [password, setPassword] = useState('')
 
+const handleSubmitBasicAuth = e => {
+    e.preventDefault()
+    try {
+        const credentials = {username, password}
+        console.log(credentials)
+        TokenService.saveAuthToken(
+            TokenService.makeBasicAuthToken(credentials)
+        )
+    } catch (err) {
+        console.error(err.message)
+    }
+  }
     return (
-        <form>
+        <form onSubmit={handleSubmitBasicAuth}>
             <label>
-                Email
+                Username
                 <input 
                     type="text" 
                     name="username"
-                    // onChange={() => setEmail()}
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
                     required 
                     />
             </label>
@@ -20,11 +34,13 @@ function Login() {
                 <input 
                     type="password" 
                     name="password"
-                    // onChange={() => setPassword}
+                    password={password}
+                    onChange={e => setPassword(e.target.value)}
                     required/>
             </label>
-      </form>
-    )
-}
+            <button type='submit'>Login</button>
+      </form> 
+        )
+    }
 
 export default Login
