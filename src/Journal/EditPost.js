@@ -1,9 +1,29 @@
-import React from 'react'
-// import config from '../config'
+import React, {useState, useEffect} from 'react'
+import config from '../config'
+import TokenService from '../services/token-service'
 
-const EditPost = (props) => {
+const EditPost = () => {
 
-    // const [content, setContent] = useState(props.content)
+    const [journal, setJournal] = useState([])
+
+    const getJournal = async (id) => {
+        try {
+            const response = await fetch(`${config.API_ENDPOINT}/api/journal/${id}`, {
+                headers: {
+                    'Authorization': `bearer ${TokenService.getAuthToken()}`,
+                }
+            })
+             const jsonData = await response.json()
+            setJournal(jsonData)
+
+        } catch (err) {
+            console.error(err.message)
+        }
+    }
+
+    useEffect(() => {
+        getJournal()
+    }, [])
 
     // const updateJournal = async e => {
     //     e.preventDefault()
@@ -23,9 +43,10 @@ const EditPost = (props) => {
     //         console.error(err.message)
     //     }
     // }
+    console.log(journal)
     return (
         <section>
-            <p>{props.content}</p>
+            <p></p>
         </section>
     )
 }

@@ -9,7 +9,7 @@ const NewPost = () => {
         e.preventDefault()
         try {
             const newEntry = {content}
-            await fetch(`${config.API_ENDPOINT}`, {
+            await fetch(`${config.API_ENDPOINT}/api/journal`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
