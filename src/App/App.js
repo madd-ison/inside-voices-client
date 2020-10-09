@@ -36,10 +36,7 @@ function App () {
           
           <PrivateRoute path='/resources' component={Resources} />
           
-          <Route path='/contact'>
-            <ContactUs />
-          </Route>
-
+          <PublicRoute path='/contact' component={ContactUs} />
         </Switch>
       <Footer />
     </main>)
