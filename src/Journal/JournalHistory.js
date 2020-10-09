@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
 import config from '../config'
 import moment from 'moment'
 import TokenService from '../services/token-service'
@@ -51,11 +50,8 @@ const JournalHistory = () => {
         <div>
            {journals.map(journal => (
                <section key={journal.id}>
-                   <h3>{moment(journal.title).format("LL")}</h3>
+                   <h3>Thoughts on {moment(journal.title).format("LL")}</h3>
                    <p>{journal.content}</p>
-                    <Link to={`/journal/${journal.id}`}>
-                        <button>Edit Post</button>
-                    </Link>
                    <button onClick={() => deletePost(journal.id)}>Delete</button>
                </section>
            ))}

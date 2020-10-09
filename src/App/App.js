@@ -12,7 +12,6 @@ import ContactUs from '../ContactUs/ContactUs'
 import Login from '../Forms/Login'
 import Logout from '../Forms/Logout'
 import TokenService from '../services/token-service'
-import EditPost from '../Journal/EditPost'
 import PrivateRoute from '../utils/PrivateRoute'
 import PublicRoute from '../utils/PublicRoute'
 
@@ -31,9 +30,7 @@ function App () {
 
           <PrivateRoute path='/home' component={Home} />
 
-          <PrivateRoute exact path={'/journal'} component={Journal} />
-          
-          <PrivateRoute exact path={'/journal/:id'} component={EditPost} />   
+          <PrivateRoute exact path={'/journal'} component={Journal} />  
 
           <PrivateRoute path={'/meditations'} component={Meditations}/>
           
