@@ -1,43 +1,33 @@
-import React, { Component } from 'react'
+import React, {useState} from 'react'
 import AuthApiService from '../services/auth-api-service'
 
-export default class Register extends Component {
-  static defaultProps = {
-    onRegistrationSuccess: () => {}
+function Register() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    try {
+      const {username, password} = e.target
+
+      AuthApiService.postUser({
+          username: username.value,
+          password: password.value,
+      }) 
+          .then(user => {
+              username.value = ''
+              password.value = ''
+              window.location = '/home'
+          })
+  } catch (err) {
+      console.error(err.message)
   }
-
-  state = { error: null }
-
-  handleSubmit = ev => {
-    ev.preventDefault()
-    const { username, password } = ev.target
-
-    this.setState({ error: null })
-    AuthApiService.postUser({
-      username: username.value,
-      password: password.value
-    })
-      .then(user => {
-        username.value = ''
-        password.value = ''
-        this.props.onRegistrationSuccess()
-      })
-      .catch(res => {
-        this.setState({ error: res.error })
-      })
-    console.log(username.value)
-  }
-
-  render() {
-    const { error } = this.state
+}
     return (
       <form
         className='RegistrationForm'
-        onSubmit={this.handleSubmit}
+        onSubmit={handleSubmit}
       >
-        <div role='alert'>
-          {error && <p className='red'>{error}</p>}
-        </div>
         <div className='username'>
           <label htmlFor='RegistrationForm__user_name'>
             Username
@@ -45,19 +35,23 @@ export default class Register extends Component {
           <input
             name='username'
             type='text'
+            value={username}
+            onChange={e => setUsername(e.target.value)}
             required
-            id='RegistrationForm__username'>
+            >
           </input>
         </div>
-        <div className='password'>
+        <div className='reg-password'>
           <label htmlFor='RegistrationForm__password'>
             Password
           </label>
           <input
             name='password'
             type='password'
+            value={password}
+            onChange={e => setPassword(e.target.value)}
             required
-            id='RegistrationForm__password'>
+            >
           </input>
         </div>
         <button type='submit'>
@@ -66,4 +60,4 @@ export default class Register extends Component {
       </form>
     )
   }
-}
+export default Register

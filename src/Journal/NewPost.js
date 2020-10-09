@@ -13,7 +13,7 @@ const NewPost = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    'authorization': `basic ${TokenService.getAuthToken()}`,
+                    'Authorization': `bearer ${TokenService.getAuthToken()}`,
                     },
                 body: JSON.stringify(newEntry)
             })

@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Link, Switch, Route, Redirect} from "react-router-dom"
+import React from 'react'
+import {Link, Switch, Route} from "react-router-dom"
 import Header from '../Header/Header'
 import './App.css'
 import Footer from '../Footer/Footer'
@@ -12,42 +12,32 @@ import ContactUs from '../ContactUs/ContactUs'
 import Login from '../Forms/Login'
 import Logout from '../Forms/Logout'
 import TokenService from '../services/token-service'
+// import EditPost from '../Journal/EditPost'
+import PrivateRoute from '../utils/PrivateRoute'
+import PublicRoute from '../utils/PublicRoute'
 
 function App () {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <main className='App'>
       <div className='login'>
-      {TokenService.hasAuthToken() ? <Logout /> : <Login />}
-          <Link to='/home'>
-            <button type='submit' onClick={() => setIsLoggedIn(!isLoggedIn)}>Log {isLoggedIn ? "Out" : "In"}</button>
-            </Link>
+      {TokenService.hasAuthToken() ? 
+        <Logout /> : <Link to='/login'><button>Log In</button></Link>}
       </div>
       <Link to='/home'><Header /></Link>
         <Switch>
-          <Route exact path='/'>
-            <LandingPage />
-          </Route>
+          <PublicRoute exact path='/' component={LandingPage}/>
 
-          <Route path='/home'>
-            {isLoggedIn ? <Home /> : <Redirect to='/' />}
-          </Route>
+          <PublicRoute path='/login' component={Login} />
 
-          <Route exact path='/journal'>
-            <Journal />
-          </Route>
+          <PrivateRoute path='/home' component={Home} />
 
-          {/* <Route exact path='/journal/:id'>
-            <EditPost />
-          </Route> */}
-
-          <Route path='/meditations'>
-            <Meditations />
-          </Route>
+          <PrivateRoute exact path={'/journal'} component={Journal} />
           
-          <Route path='/resources'>
-            <Resources />
-          </Route>
+{/*       <PrivatRoute exact path={'/journal/:id'} component={EditPost}>  */}
+
+          <PrivateRoute path={'/meditations'} component={Meditations}/>
+          
+          <PrivateRoute path='/resources' component={Resources} />
           
           <Route path='/contact'>
             <ContactUs />

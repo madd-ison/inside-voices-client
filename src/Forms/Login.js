@@ -1,24 +1,38 @@
 import React, {useState} from 'react'
 import TokenService from '../services/token-service'
+import AuthApiService from '../services/auth-api-service'
 
 function Login() {
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
 
-const handleSubmitBasicAuth = e => {
+const handleSubmitJwtAuth = async e => {
     e.preventDefault()
     try {
-        const credentials = {username, password}
-        console.log(credentials)
-        TokenService.saveAuthToken(
-            TokenService.makeBasicAuthToken(credentials)
-        )
+        const {username, password} = e.target
+
+        AuthApiService.postLogin({
+            username: username.value,
+            password: password.value,
+        }) 
+            .then(res => {
+                username.value = ''
+                password.value = ''
+                TokenService.saveAuthToken(res.authToken)
+                window.location = '/home'
+            })
+        // TokenService.saveAuthToken(
+        //     TokenService.makeBasicAuthToken(username.value, password.value)
+        // )
+        // username.value = ''
+        // password.value=''
     } catch (err) {
         console.error(err.message)
     }
   }
     return (
-        <form onSubmit={handleSubmitBasicAuth}>
+        <section>
+        <form onSubmit={handleSubmitJwtAuth}>
             <label>
                 Username
                 <input 
@@ -40,6 +54,7 @@ const handleSubmitBasicAuth = e => {
             </label>
             <button type='submit'>Login</button>
       </form> 
+      </section>
         )
     }
 
