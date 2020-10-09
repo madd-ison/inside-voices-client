@@ -23,7 +23,7 @@ function App () {
         <Logout /> : <Link to='/login'><button>Log In</button></Link>}
       </div>
       <Link to='/home'><Header /></Link>
-        <Switch>
+      <Switch>
           <PublicRoute exact path='/' component={LandingPage}/>
 
           <PublicRoute path='/login' component={Login} />
