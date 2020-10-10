@@ -31,7 +31,7 @@ function Register() {
         onSubmit={handleSubmit}
       >
         <div className='username'>
-          <label htmlFor='RegistrationForm__user_name'>
+          <label htmlFor='RegistrationForm__username'>
             Username
           </label>
           <input
