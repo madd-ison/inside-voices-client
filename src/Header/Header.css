@@ -13,13 +13,13 @@ header h1 {
     font-weight: 700;
     letter-spacing: 12px;
     color: #D79922;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #D79922;
+    text-shadow: 2px 2px rgb(241, 60, 32);
 }
 
 @media only screen and (min-width: 600px) {
     header h1 {
     color: #EFE2BA;
+    text-shadow: none;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: #D79922;
     }

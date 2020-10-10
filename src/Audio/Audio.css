@@ -5,3 +5,12 @@
     max-height: 200px;
     max-width: 60%;
 }
+
+#audio h3 {
+    font-size: 3vw;
+}
+
+#audio {
+    background-color: rgb(215, 153, 34);
+    color: rgb(64, 86, 161);
+}

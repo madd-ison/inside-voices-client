@@ -12,7 +12,7 @@ function Meditations() {
             author={audio.author}
             audio={audio.file} /> )
     return (
-        <h2>{audio}</h2>
+        <div>{audio}</div>
     )
 }
 
