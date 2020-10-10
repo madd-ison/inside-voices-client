@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import config from '../config'
 import moment from 'moment'
 import TokenService from '../services/token-service'
+import '../App/Buttons.css'
 
 const JournalHistory = () => {
 
@@ -52,7 +53,7 @@ const JournalHistory = () => {
                <section key={journal.id}>
                    <h3>Thoughts on {moment(journal.title).format("LL")}</h3>
                    <p>{journal.content}</p>
-                   <button onClick={() => deletePost(journal.id)}>Delete</button>
+                   <button className='big-button' onClick={() => deletePost(journal.id)}>Delete</button>
                </section>
            ))}
         </div>

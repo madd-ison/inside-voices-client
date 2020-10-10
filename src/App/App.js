@@ -1,7 +1,8 @@
 import React from 'react'
-import {Link, Switch, Route} from "react-router-dom"
+import {Link, Switch} from "react-router-dom"
 import Header from '../Header/Header'
 import './App.css'
+import './Buttons.css'
 import Footer from '../Footer/Footer'
 import LandingPage from '../LandingPage/LandingPage'
 import Home from '../Home/Home'
@@ -20,7 +21,7 @@ function App () {
     <main className='App'>
       <div className='login'>
       {TokenService.hasAuthToken() ? 
-        <Logout /> : <Link to='/login'><button>Log In</button></Link>}
+        <Logout /> : <Link to='/login'><button className='small-button'>Log In</button></Link>}
       </div>
       <Link to='/home'><Header /></Link>
       <Switch>

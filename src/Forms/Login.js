@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
+import '../App/Buttons.css'
 
 function Login() {
 const [username, setUsername] = useState('')
@@ -52,7 +53,7 @@ const handleSubmitJwtAuth = async e => {
                     onChange={e => setPassword(e.target.value)}
                     required/>
             </label>
-            <button type='submit'>Login</button>
+            <button className='big-button' type='submit'>Login</button>
       </form> 
       </section>
         )

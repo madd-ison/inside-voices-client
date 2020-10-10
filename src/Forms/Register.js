@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import AuthApiService from '../services/auth-api-service'
+import '../App/Buttons.css'
 
 function Register() {
   const [username, setUsername] = useState('')
@@ -54,7 +55,7 @@ function Register() {
             >
           </input>
         </div>
-        <button type='submit'>
+        <button className='big-button' type='submit'>
           Register
         </button>
       </form>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import config from '../config'
 import TokenService from '../services/token-service'
+import '../App/Buttons.css'
 
 const NewPost = () => {
     const [content, setContent] = useState('')
@@ -44,7 +45,7 @@ const NewPost = () => {
                     onChange={e => setContent(e.target.value)}
                  />
                 <br />
-                <button 
+                <button className='big-button' 
                     type='submit'
                 >Post</button>
             </form>
