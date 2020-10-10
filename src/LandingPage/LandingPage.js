@@ -9,7 +9,7 @@ function LandingPage(props) {
     return (
         <div className='about-us'>
             <section>
-                <h1>Check In On <em>You</em></h1>
+                <h1>Check In On <em>You</em>.</h1>
                 <img src={journal} alt='journal page' />
                 <p>Record moments of inspiration, 
                     reflect on daily thoughts and accomplishments, 
@@ -18,7 +18,7 @@ function LandingPage(props) {
             </section>
 
             <section>
-                <h1>Go Within</h1>
+                <h1>Go Within.</h1>
                 <img src={meditations} alt='meditations page' />
                 <p>Experience healthy moments of stillness.</p>
             </section>
