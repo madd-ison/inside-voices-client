@@ -32,10 +32,11 @@ const handleSubmitJwtAuth = async e => {
     }
   }
     return (
-        <section>
+        <section className='login-form'>
         <form onSubmit={handleSubmitJwtAuth}>
+        <div>
             <label>
-                Username
+                Username: 
                 <input 
                     type="text" 
                     name="username"
@@ -44,8 +45,10 @@ const handleSubmitJwtAuth = async e => {
                     required 
                     />
             </label>
+            </div>
+            <div>
             <label>
-                Password
+                Password: 
                 <input 
                     type="password" 
                     name="password"
@@ -53,6 +56,7 @@ const handleSubmitJwtAuth = async e => {
                     onChange={e => setPassword(e.target.value)}
                     required/>
             </label>
+            </div>
             <button className='big-button' type='submit'>Login</button>
       </form> 
       </section>

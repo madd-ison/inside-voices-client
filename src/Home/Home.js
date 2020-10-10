@@ -5,17 +5,18 @@ import './Home.css'
 function Home() {
     return (
         <div className='home'>
-            <section>
-                <Link to='/journal' style={{color: '#fff'}}><h1>Journal</h1></Link>
-            </section>
-            
-            <section>
-                <Link to='/meditations' style={{color: '#000'}}><h1>Meditations</h1></Link>
-            </section>
+                
+                <Link to='/journal' style={{color: '#EFE2BA'}}>
+                <section><h1>Journal</h1></section>
+                </Link>
 
-            <section>
-                <Link to='/resources' style={{color: '#fff'}}><h1>Resources</h1></Link>
-            </section>
+                <Link to='/meditations' style={{color: '#EFE2BA'}}>
+                <section><h1>Meditations</h1></section>
+                </Link>
+
+                <Link to='/resources' style={{color: '#EFE2BA'}}>
+                <section><h1>Resources</h1></section>
+                </Link>
         </div>
     )
 }

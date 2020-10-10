@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import AuthApiService from '../services/auth-api-service'
 import '../App/Buttons.css'
+import './Forms.css'
 
 function Register() {
   const [username, setUsername] = useState('')

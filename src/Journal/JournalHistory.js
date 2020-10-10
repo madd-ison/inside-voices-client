@@ -3,6 +3,7 @@ import config from '../config'
 import moment from 'moment'
 import TokenService from '../services/token-service'
 import '../App/Buttons.css'
+import './Journal.css'
 
 const JournalHistory = () => {
 
@@ -53,7 +54,7 @@ const JournalHistory = () => {
                <section key={journal.id}>
                    <h3>Thoughts on {moment(journal.title).format("LL")}</h3>
                    <p>{journal.content}</p>
-                   <button className='big-button' onClick={() => deletePost(journal.id)}>Delete</button>
+                   <button className='small-button delete' onClick={() => deletePost(journal.id)}>Delete</button>
                </section>
            ))}
         </div>

@@ -7,3 +7,22 @@
     font-size: 18px;
     margin-bottom: 30px;
 }
+
+.journal-intro {
+    color: rgb(64, 86, 161);
+}
+
+select {
+    background: rgb(239, 226, 186);
+    border-radius: 5px;
+}
+
+.new-post {
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.delete:hover {
+    background: rgb(241, 60, 32);
+}

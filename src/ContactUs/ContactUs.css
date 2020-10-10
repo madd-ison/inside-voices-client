@@ -1,0 +1,29 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input {
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact label {
+    margin-bottom: 10px;
+}
+
+.styled-textarea {
+    width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact button {
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}

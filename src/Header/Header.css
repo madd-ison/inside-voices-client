@@ -12,8 +12,15 @@ header h1 {
     font-size: 6vw;
     font-weight: 700;
     letter-spacing: 12px;
-    color: #EFE2BA;
+    color: #D79922;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: #D79922;
 }
 
+@media only screen and (min-width: 600px) {
+    header h1 {
+    color: #EFE2BA;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #D79922;
+    }
+}

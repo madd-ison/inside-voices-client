@@ -1,0 +1,16 @@
+div .home {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+div .home:hover {
+    transform: translate(0, 0.375em);
+    background: rgb(215, 153, 34);
+    border-radius: 10px;
+}
+
+.home h1 {
+    font-size: 4vw;
+}

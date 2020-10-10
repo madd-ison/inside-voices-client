@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import config from '../config'
 import TokenService from '../services/token-service'
 import '../App/Buttons.css'
+import './Journal.css'
 
 const NewPost = () => {
     const [content, setContent] = useState('')
@@ -36,7 +37,7 @@ const NewPost = () => {
                 <option>What's a plan of action for right *now*?</option>
               </select>
               <br />
-                <textarea
+                <textarea className='new-post'
                     rows={10}
                     cols={60}
                     wrap='hard'
