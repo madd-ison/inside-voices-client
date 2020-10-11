@@ -12,7 +12,7 @@
 * Experience healthy moments of stillness.
 
 ## Resources
-![Resources Page](/stc/img/resources.png)
+![Resources Page](/src/img/resources.png)
 * Inside Voices helps you connect with the community that wants you to experience joy. Find an ever-growing list of free food fridges, local aid funds, and low cost mental health care.
 
 ## Live App:
