@@ -3,6 +3,8 @@
 
 * Includes a journal app to track daily thoughts and growth, guided and instrumental meditations, and a colossal list of local organizations that provide food, healthcare, housing, and other services to those who truly need them. I plan to continuously expand this project.
 
+* Stack Used: Node, PostgreSQL, Express, React, React Router, JavaScript, HTML5, CSS
+
 ## Journal Page 
 ![Journal Page](/src/img/journal.png)
 * Record moments of inspiration, reflect on daily thoughts and accomplishments, track your growth, and tell yourself what you need to hear.
@@ -17,7 +19,7 @@
 
 ## Live App:
 
-* [INSIDE VOICES](https://inside-voices-client.madd-ison.vercel.app/)
+* [INSIDE VOICES](https://inside-voices-client.vercel.app/)
 
 ### Demo Credentials:
 * username: username1
