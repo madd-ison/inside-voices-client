@@ -22,11 +22,6 @@ const handleSubmitJwtAuth = async e => {
                 TokenService.saveAuthToken(res.authToken)
                 window.location = '/home'
             })
-        // TokenService.saveAuthToken(
-        //     TokenService.makeBasicAuthToken(username.value, password.value)
-        // )
-        // username.value = ''
-        // password.value=''
     } catch (err) {
         console.error(err.message)
     }
