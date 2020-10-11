@@ -19,7 +19,7 @@ function Register() {
           .then(user => {
               username.value = ''
               password.value = ''
-              window.location = '/home'
+              window.location = '/login'
           })
   } catch (err) {
       console.error(err.message)

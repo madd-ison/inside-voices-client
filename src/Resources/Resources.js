@@ -1,10 +1,17 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Resources.css'
 import Accordion from '../utils/Accordion'
 
 
 function Resources() {
     return (
+        <div>
+        <div id='back'>
+            <Link to='/home'>
+                <button className='small-button'>Back</button>
+                </Link>
+        </div>
         <section>
             <h1>Find what you need in NYC.</h1>
             <Accordion
@@ -144,6 +151,7 @@ function Resources() {
                     by phone (212) 629-7440.</p>
                             "/>
         </section>
+        </div>
     )
 }
 

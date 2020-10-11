@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Switch} from "react-router-dom"
+import {Link, Switch, Route} from "react-router-dom"
 import Header from '../Header/Header'
 import './App.css'
 import './Buttons.css'
@@ -31,13 +31,13 @@ function App () {
 
           <PrivateRoute path='/home' component={Home} />
 
-          <PrivateRoute exact path={'/journal'} component={Journal} />  
+          <PrivateRoute exact path='/journal' component={Journal} />  
 
-          <PrivateRoute path={'/meditations'} component={Meditations}/>
+          <PrivateRoute path='/meditations' component={Meditations}/>
           
           <PrivateRoute path='/resources' component={Resources} />
           
-          <PublicRoute path='/contact' component={ContactUs} />
+          <Route path='/contact' component={ContactUs} />
         </Switch>
       <Footer />
     </main>)

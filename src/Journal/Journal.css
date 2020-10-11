@@ -17,10 +17,15 @@ select {
     border-radius: 5px;
 }
 
+.journal-prompt {
+    max-width: 80%;
+}
+
 .new-post {
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
+    max-width: 80%;
 }
 
 .delete:hover {

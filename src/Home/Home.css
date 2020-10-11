@@ -1,16 +1,27 @@
 div .home {
-    max-width: 50%;
+    max-width: 90%;
+    padding: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px;
-}
-
-div .home:hover {
-    transform: translate(0, 0.375em);
-    background: rgb(215, 153, 34);
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .home h1 {
-    font-size: 4vw;
+    font-size: 20px;
+}
+
+.home button {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 650px) {
+    div .home {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }

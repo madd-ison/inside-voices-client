@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Journal.css'
 import JournalHistory from './JournalHistory'
 import NewPost from './NewPost'
@@ -8,6 +9,11 @@ import NewPost from './NewPost'
 function Journal() {
     return (
         <div className='journal'>
+        <div id='back'>
+            <Link to='/home'>
+                <button className='small-button'>Back</button>
+                </Link>
+        </div>
             <NewPost />
             <JournalHistory />
         </div>
