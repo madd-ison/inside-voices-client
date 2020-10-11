@@ -19,6 +19,7 @@ function Register() {
           .then(user => {
               username.value = ''
               password.value = ''
+              alert('Thanks for registering! Please log in to your new account.')
               window.location = '/login'
           })
   } catch (err) {
