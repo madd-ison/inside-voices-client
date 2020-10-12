@@ -32,10 +32,11 @@ function Register() {
         onSubmit={handleSubmit}
       >
         <div className='username'>
-          <label htmlFor='RegistrationForm__username'>
+          <label for='user-name'>
             Username
           </label>
           <input
+            id='user-name'
             name='username'
             type='text'
             value={username}
@@ -45,10 +46,11 @@ function Register() {
           </input>
         </div>
         <div className='reg-password'>
-          <label htmlFor='RegistrationForm__password'>
+          <label for='user-password'>
             Password
           </label>
           <input
+            id='user-password'
             name='password'
             type='password'
             value={password}
