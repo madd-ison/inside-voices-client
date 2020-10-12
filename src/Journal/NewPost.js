@@ -46,7 +46,7 @@ const NewPost = () => {
                     onChange={e => setContent(e.target.value)}
                  />
                 <br />
-                <button className='big-button' 
+                <button id='post-journal' className='big-button' 
                     type='submit'
                 >Post</button>
             </form>

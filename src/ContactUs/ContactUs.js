@@ -15,7 +15,7 @@ function ContactUs() {
             <label htmlFor='message'>Your message:</label>
                 <textarea id='user-message' className='styled-textarea' name='your-message'/>
                 <br />
-                <button className='small-button' type="submit">Send</button>
+                <button id='submit-contact-form' className='small-button' type="submit">Send</button>
         </form>
         </section>
     )

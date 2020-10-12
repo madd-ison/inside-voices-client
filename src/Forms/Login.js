@@ -52,7 +52,7 @@ const handleSubmitJwtAuth = async e => {
                     required/>
             </label>
             </div>
-            <button className='big-button' type='submit'>Login</button>
+            <button id='submit-login' className='big-button' type='submit'>Login</button>
       </form> 
       </section>
         )

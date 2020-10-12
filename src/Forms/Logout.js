@@ -7,7 +7,7 @@ function Logout() {
             TokenService.clearAuthToken()
             window.location = '/'
         }
-    return <button className='small-button' onClick={handleLogoutClick}>Logout</button>
+    return <button id='log-out' className='small-button' onClick={handleLogoutClick}>Logout</button>
 }
 
 export default Logout

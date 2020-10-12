@@ -59,7 +59,7 @@ function Register() {
             >
           </input>
         </div>
-        <button className='big-button' type='submit'>
+        <button id='submit-registration' className='big-button' type='submit'>
           Register
         </button>
       </form>
