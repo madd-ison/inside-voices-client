@@ -6,14 +6,14 @@ function ContactUs() {
         <section>
         <h2>Contact Us</h2>
         <form action="https://formspree.io/mbjprjbq" method="POST" id='contact'>
-            <label for='name'>Name</label>
-                <input type="text" name="name" />
+            <label htmlFor='name'>Name</label>
+                <input id='user-name' type="text" name="name" />
                 <br />
-            <label for='email'>Email</label>
-                <input type="email" name="_replyto" />
+            <label htmlFor='email'>Email</label>
+                <input id='user-email' type="email" name="_replyto" />
                 <br />
-            <label for='message'>Your message:</label>
-                <textarea className='styled-textarea' name='your-message'/>
+            <label htmlFor='message'>Your message:</label>
+                <textarea id='user-message' className='styled-textarea' name='your-message'/>
                 <br />
                 <button className='small-button' type="submit">Send</button>
         </form>

@@ -30,7 +30,7 @@ const handleSubmitJwtAuth = async e => {
         <section className='login-form'>
         <form onSubmit={handleSubmitJwtAuth}>
         <div>
-            <label for='username'>
+            <label htmlFor='username'>
                 Username: 
                 <input 
                     type="text" 
@@ -42,7 +42,7 @@ const handleSubmitJwtAuth = async e => {
             </label>
             </div>
             <div>
-            <label for='password'>
+            <label htmlFor='password'>
                 Password: 
                 <input 
                     type="password" 
