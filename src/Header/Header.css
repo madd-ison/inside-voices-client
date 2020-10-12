@@ -12,7 +12,7 @@ header h1 {
     font-size: 6vw;
     font-weight: 700;
     letter-spacing: 12px;
-    color: #D79922;
+    color: #4056A1;
     text-shadow: 2px 2px rgb(241, 60, 32);
 }
 
@@ -21,6 +21,6 @@ header h1 {
     color: #EFE2BA;
     text-shadow: none;
     -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #D79922;
+    -webkit-text-stroke-color: #4056A1;
     }
 }
