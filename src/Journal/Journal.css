@@ -6,6 +6,7 @@
 #journal_prompt {
     font-size: 18px;
     margin-bottom: 30px;
+    max-width: 80%;
 }
 
 .journal-intro {
@@ -15,10 +16,6 @@
 select {
     background: rgb(239, 226, 186);
     border-radius: 5px;
-}
-
-.journal-prompt {
-    max-width: 80%;
 }
 
 .new-post {
