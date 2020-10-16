@@ -11,7 +11,6 @@ function Register() {
     e.preventDefault()
     try {
       const {username, password} = e.target
-
       AuthApiService.postUser({
           username: username.value,
           password: password.value,
@@ -58,6 +57,8 @@ function Register() {
             required
             >
           </input>
+          <p id='password-rules'>Password must be at least 6 characters long, include
+            1 uppercase letter, 1 number, and 1 special character (#$!).</p>
         </div>
         <button id='submit-registration' className='big-button' type='submit'>
           Register

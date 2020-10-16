@@ -18,3 +18,7 @@ div .username, .reg-password {
     flex-direction: column;
     max-width: 60%;
 }
+
+#password-rules {
+    font-size: 12px;
+}
